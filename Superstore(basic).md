@@ -29,28 +29,35 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 ```
+---
 
-_For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices_
+_For this project, I used SQL to query the Superstore database to get information about items sold at the store, stock and their prices_
 
-#Items ordered by price
+### Items ordered by price
+```
 SELECT item_id, item_name, price
 FROM superstore
 ORDER BY price;
+```
 
-#Supersotre stock statistics
+### Supersotre stock statistics
+```
 SELECT COUNT(item_id) total_of_products, ROUND(AVG(price),2) as avg_price, SUM(stock_quantity) as total_stock, COUNT(DISTINCT category) as Number_of_category
 FROM superstore;
+```
 
-#Average price for items in the "Kitchen Supplies" category
+### Average price for items in the "Kitchen Supplies" category
+```
 SELECT item_id, item_name, category, AVG(price) as avg_price
 FROM superstore
 WHERE category LIKE '%kitchen supplies%'
 GROUP BY item_id, item_name, category;
+```
 
-#Average price for items above 4.6 of rating
+### Average price for items above 4.6 of rating
+```
 SELECT item_id, item_name, category, AVG(price) as avg_price
 FROM superstore
 WHERE average_rating > 4.6
 GROUP BY item_id, item_name, category;
-
-
+```
