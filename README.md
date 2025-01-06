@@ -8,7 +8,7 @@ Each file is labeled with its level of complexity to make navigation easier.
 ---
 
 ## **Table of Contents**
-1. Superstore: 
+1. Superstore: https://github.com/NoraJaramillo/SQL/blob/main/Superstore(basic).md
 
 ---
 
