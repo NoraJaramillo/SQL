@@ -8,18 +8,12 @@ Each file is labeled with its level of complexity to make navigation easier.
 ---
 
 ## **Table of Contents**
+# **Basic Queries**
+_These scripts include fundamental SQL commands for beginners_
 1. Superstore: https://github.com/NoraJaramillo/SQL/blob/main/Superstore(basic).md
 
 ---
 
-## **Basic Queries**
-These scripts include fundamental SQL commands for beginners
-
-| File Name         | Description                                      |
-|-------------------|--------------------------------------------------|
-| `superstores.sql` | Basic SELECT statements using a Superstores dataset. |
-
----
 
 ## **How to Use This Repository**
 1. Clone the repository to your local machine.
@@ -28,7 +22,7 @@ These scripts include fundamental SQL commands for beginners
 
 ---
 
-If you have any questions or suggestions, feel free to [contact me](mailto:your-email@example.com). I'm always open to feedback and collaboration!
+If you have any questions or suggestions, feel free to [contact me](mailto:norajaramilloles@gmail.com). I'm always open to feedback and collaboration!
 
 
 Feel free to explore, and don’t hesitate to reach out if you have questions or want to connect. I’m always open to learning and sharing ideas!
