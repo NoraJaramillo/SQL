@@ -22,7 +22,7 @@ _These scripts include fundamental SQL commands for beginners_
 
 ---
 
-If you have any questions or suggestions, feel free to [contact me](mailto:norajaramilloles@gmail.com). I'm always open to feedback and collaboration!
+If you have any questions or suggestions, feel free to contact me. I'm always open to feedback and collaboration!
 
 
 Feel free to explore, and don’t hesitate to reach out if you have questions or want to connect. I’m always open to learning and sharing ideas!
