@@ -1,6 +1,8 @@
-#This project utilizes the following Superstore data: 
+# **SUPERSTORE ANALYSIS** 
+_This project utilizes the following Superstore data:_
 
-CREATE TABLE superstore (
+```
+    CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
     category TEXT,
@@ -26,8 +28,9 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+```
 
-#For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
+_For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices_
 
 #Items ordered by price
 SELECT item_id, item_name, price
