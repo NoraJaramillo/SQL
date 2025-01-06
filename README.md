@@ -8,14 +8,14 @@ Each file is labeled with its level of complexity to make navigation easier.
 ---
 
 ## **Table of Contents**
-# **Basic Queries**
+### **-Basic Queries**
 _These scripts include fundamental SQL commands for beginners_
 1. Superstore: https://github.com/NoraJaramillo/SQL/blob/main/Superstore(basic).md
 
 ---
 
 
-## **How to Use This Repository**
+### **How to Use This Repository**
 1. Clone the repository to your local machine.
 2. Navigate to the desired file and review the SQL scripts.
 3. Run the scripts in your preferred SQL environment (e.g., SQLiteStudio, MySQL Workbench).
