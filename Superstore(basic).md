@@ -40,7 +40,7 @@ FROM superstore
 ORDER BY price;
 ```
 
-### Supersotre stock statistics
+### Superstore stock statistics
 ```
 SELECT COUNT(item_id) total_of_products, ROUND(AVG(price),2) as avg_price, SUM(stock_quantity) as total_stock, COUNT(DISTINCT category) as Number_of_category
 FROM superstore;
