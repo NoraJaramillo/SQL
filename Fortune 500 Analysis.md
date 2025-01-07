@@ -61,3 +61,11 @@ VALUES
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
 ```
 ---
+### Identifying Industry Leaders:
+_Analyzed companies with the highest revenues within each industry to identify the most influential and profitable market players. This helps to understand which sectors are dominating the market and the characteristics of these companies in terms of resources, size, and strategies._
+```
+SELECT company_name, industry, revenue
+FROM(SELECT company_name, industry, revenue, rank () over(partition by industry order by revenue DESC)as rank
+	FROM fortune_companies)a
+WHERE rank = 1
+```
