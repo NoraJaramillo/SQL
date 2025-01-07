@@ -3,14 +3,11 @@
 
 Welcome to my SQL portfolio! This repository features a collection of SQL projects and scripts I’ve worked on, highlighting my skills in data analysis, database management, and problem-solving. 
 
-Each file is labeled with its level of complexity to make navigation easier.
 
 ---
 
 ## **Table of Contents**
-### **-Basic Queries**
-_These scripts include fundamental SQL commands._
-1. Superstore: https://github.com/NoraJaramillo/SQL/blob/main/Superstore(basic).md
+1. Fortune 500 Analysis: https://github.com/NoraJaramillo/SQL/blob/main/Superstore(basic).md
 
 ---
 
