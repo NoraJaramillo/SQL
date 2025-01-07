@@ -9,7 +9,7 @@ Each file is labeled with its level of complexity to make navigation easier.
 
 ## **Table of Contents**
 ### **-Basic Queries**
-_These scripts include fundamental SQL commands for beginners_
+_These scripts include fundamental SQL commands._
 1. Superstore: https://github.com/NoraJaramillo/SQL/blob/main/Superstore(basic).md
 
 ---
