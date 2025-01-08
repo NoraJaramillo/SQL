@@ -61,11 +61,30 @@ VALUES
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
 ```
 ---
-### Identifying Industry Leaders:
-_Analyzed companies with the highest revenues within each industry to identify the most influential and profitable market players. This helps to understand which sectors are dominating the market and the characteristics of these companies in terms of resources, size, and strategies._
+### 1.Identifying Industry Leaders and sector comparison:
+_This query analyzes the top-revenue companies within each industry, highlighting the leaders and identifying the overall highest-revenue company. It also compares key sectors like retail and technology to uncover trends and differences._
 ```
-SELECT company_name, industry, revenue
-FROM(SELECT company_name, industry, revenue, rank () over(partition by industry order by revenue DESC)as rank
+SELECT company_name, industry, revenue, employees
+FROM(SELECT company_name, industry, revenue, employees, rank () over(partition by industry order by revenue DESC)as rank
 	FROM fortune_companies)a
 WHERE rank = 1
+order by revenue desc;
 ```
+_The results show that Walmart leads both the retail sector and all industries overall in revenue. This underscores retail’s dominance in revenue generation through mass-market operations, while the technology sector stands out for its efficiency and innovation, driving profitability with smaller workforces._
+
+### 2. Benefits and Company Size Relationship
+_This query explores how companies offering healthcare benefits vary by size, grouping organizations into four categories based on their number of employees. It analyzes patterns in the average number of paid time off (PTO) days and maternity leave weeks, helping to identify trends and disparities across company sizes.
+```
+SELECT Qty_of_employees, round(AVG(paid_time_off_days),2) Avg_PTO_days, round(AVG(maternity_leave_weeks),2) as Avg_Maternity_weeks
+FROM (SELECT company_id, healthcare_benefits, paid_time_off_days, maternity_leave_weeks,
+	CASE WHEN employees > 500000 THEN '>500K'
+	WHEN employees BETWEEN 100000 AND 500000 THEN '100K-500K'
+	WHEN employees BETWEEN 10000 AND 100000 THEN '10000-100000'
+	ELSE '0-10000' END AS Qty_of_employees
+	from fortune_companies)A
+GROUP BY Qty_of_employees
+```
+_The analysis revealed that the average number of PTO days is relatively consistent across all company sizes, ranging between 18 and 18.67 days. However, significant differences were observed in maternity leave policies:
+Larger companies (>500,000 employees) provide the best conditions, offering an average of 11 weeks of maternity leave.
+Interestingly, smaller companies (0-10,000 employees) also offer competitive conditions, with an average of 10.5 weeks of maternity leave.
+Mid-sized companies (10,000-100,000 employees) perform the worst in both metrics, offering the lowest averages for PTO days and maternity leave weeks._
