@@ -88,3 +88,17 @@ _The analysis revealed that the average number of PTO days is relatively consist
 Larger companies (>500,000 employees) provide the best conditions, offering an average of 11 weeks of maternity leave.
 Interestingly, smaller companies (0-10,000 employees) also offer competitive conditions, with an average of 10.5 weeks of maternity leave.
 Mid-sized companies (10,000-100,000 employees) perform the worst in both metrics, offering the lowest averages for PTO days and maternity leave weeks._
+
+### 3. Healthcare Benefits by Industry
+_This query analyzed the percentage of companies offering healthcare benefits across various industries to identify trends and determine which sectors prioritize employee well-being through health-related benefits._
+```
+SELECT DISTINCT industry, round((SUM(healthcare_benefits) OVER(PARTITION BY industry))*1.0 /(COUNT(healthcare_benefits) OVER(PARTITION BY industry))*1.0*100,2) as Healthcare_benefits_perc
+FROM fortune_companies
+ORDER BY 2 DESC
+```
+_The analysis revealed notable disparities in the availability of healthcare benefits across industries. The finance sector offers healthcare benefits to only 25% of companies, the lowest among all sectors, indicating a potential area for improvement in employee welfare._
+_This finding suggests that while some industries prioritize healthcare benefits to enhance employee satisfaction and retention, sectors like finance may lag despite being a high-revenue industry._
+
+
+
+
