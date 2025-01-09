@@ -99,6 +99,17 @@ ORDER BY 2 DESC
 _The analysis revealed notable disparities in the availability of healthcare benefits across industries. The finance sector offers healthcare benefits to only 25% of companies, the lowest among all sectors, indicating a potential area for improvement in employee welfare._
 _This finding suggests that while some industries prioritize healthcare benefits to enhance employee satisfaction and retention, sectors like finance may lag despite being a high-revenue industry._
 
-
+### 4. Above Average Paid Time Off Policies by Industry
+_This query identifies companies that offer more paid time off (PTO) days than the average for their industry, focusing on organizations that prioritize employee well-being and competitive benefits._
+```
+SELECT fc.company_name, fc.industry, fc.paid_time_off_days
+FROM fortune_companies fc
+JOIN (SELECT DISTINCT industry, AVG(paid_time_off_days) OVER(PARTITION BY industry) AS avg_PTO
+FROM fortune_companies) avg
+ON fc.industry = avg.industry
+WHERE fc.paid_time_off_days >= avg.avg_PTO
+order by 2
+```
+_The analysis revealed that the manufacturing and technology sectors stand out, offering significantly higher average PTO days compared to other industries. Such policies can boost job satisfaction, improve work-life balance, and position these sectors as leaders in talent attraction and retention._
 
 
