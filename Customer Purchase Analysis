@@ -30,5 +30,59 @@ This analysis helps understand customer purchasing behavior, detect trends, and 
 By analyzing sales transactions across multiple months and linking them to customers, we can derive insights on product demand, customer preferences, seasonal trends, and regional sales performance.
 
 #1.Top-Selling Products of the Year:
+Determine which products had the highest sales volume during the year.
+
+SELECT product, SUM(Quantity) AS Total
+FROM (
+SELECT product, Quantity
+FROM JanSales
+UNION ALL
+SELECT product, Quantity
+FROM FebSales
+UNION ALL
+SELECT product, Quantity
+FROM MarSales
+UNION ALL
+SELECT product, Quantity
+FROM AprSales
+UNION ALL
+SELECT product, Quantity
+FROM MaySales
+)
+GROUP BY product
+ORDER BY 2 DESC
+
+The analysis reveals that batteries and chargers are the top-selling products, which can be attributed to their relatively lower price points and limited lifespan compared to higher-ticket items like smartphones or AirPods. 
+Consumers often purchase these essential accessories more frequently, driven by their short-term usage and need for replacement.
+This finding highlights the importance of focusing on these frequently bought products as part of a broader strategy for consistent sales performance.
+
+#2.Sales Trends Over Time:
+Analyze monthly sales trends to identify high and low-performing periods, helping understand seasonal fluctuations and demand.
+
+WITH revenue AS (
+SELECT DISTINCT month,  Sum(Quantity) OVER(PARTITION BY month) as Sales_month, Mo_No, Sum(Quantity*price) OVER(PARTITION BY month) as Revenue
+FROM (
+SELECT *, 'January' as Month, '1' as Mo_No
+FROM JanSales
+UNION ALL
+SELECT *, 'February' as Month, '2' as Mo_No
+FROM FebSales
+UNION ALL
+SELECT *, 'March' as Month, '3' as Mo_No
+FROM MarSales
+UNION ALL
+SELECT *, 'April' as Month, '4' as Mo_No
+FROM AprSales
+UNION ALL
+SELECT *, 'May' as Month, '5' as Mo_No
+FROM MaySales
+)
+ORDER BY Mo_No
+)
+
+SELECT month, Sales_month, revenue, round((revenue - LAG(revenue,1,0) OVER(ORDER BY Mo_No))/ (LAG(revenue,1,0) OVER(ORDER BY Mo_No)) *100,1) as Perc_Monthly_Growth_Decline
+FROM revenue 
+
+
 
 
