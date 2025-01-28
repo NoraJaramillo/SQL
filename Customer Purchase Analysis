@@ -1,4 +1,4 @@
-#This project utilizes customer and sales data to identify purchasing patterns and generate insights for better decision-making.
+##This project utilizes customer and sales data to identify purchasing patterns and generate insights for better decision-making.
 
 #Database Structure:
 #Sales Tables:
@@ -9,6 +9,7 @@ FebSales
 MarSales
 AprSales
 MaySales
+
 Each of these tables has the following structure:
 
 orderID (Primary Key) – Unique identifier for each sale
@@ -17,11 +18,13 @@ Quantity – Number of units purchased
 price – Price per unit
 orderdate – Date when the purchase was made
 location – Sales location
-Customer Table:
+
+#Customer Table:
 
 customers
 order_id (Foreign Key) – Links sales to customers
 acctnum – Customer account number
-Objective:
+
+#Objective:
 This analysis helps understand customer purchasing behavior, detect trends, and generate data-driven recommendations for business improvement. By analyzing sales transactions across multiple months and linking them to customers, we can derive insights on product demand, customer preferences, seasonal trends, and regional sales performance.
 
