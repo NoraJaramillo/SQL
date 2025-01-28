@@ -26,5 +26,9 @@ order_id (Foreign Key) – Links sales to customers
 acctnum – Customer account number
 
 #Objective:
-This analysis helps understand customer purchasing behavior, detect trends, and generate data-driven recommendations for business improvement. By analyzing sales transactions across multiple months and linking them to customers, we can derive insights on product demand, customer preferences, seasonal trends, and regional sales performance.
+This analysis helps understand customer purchasing behavior, detect trends, and generate data-driven recommendations for business improvement. 
+By analyzing sales transactions across multiple months and linking them to customers, we can derive insights on product demand, customer preferences, seasonal trends, and regional sales performance.
+
+#1.Top-Selling Products of the Year:
+
 
