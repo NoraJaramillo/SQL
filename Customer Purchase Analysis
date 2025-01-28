@@ -86,6 +86,11 @@ FROM revenue
 #Sales demonstrated steady growth from January to April, peaking in March, which highlights strong demand during the first quarter. 
 However, the decline in May suggests potential seasonal effects or areas where strategic adjustments may be needed to sustain performance in the future.
 
+#3.
+codigo sin terminar:
+SELECT *, TRIM(SUBSTR(location, 1, INSTR(location, ',') - 1)) as street,  SUBSTR(location, INSTR(location, ',') + 1, INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') - 1) AS city, TRIM(SUBSTR(location, INSTR(location, ',') + INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') + 1)) AS state_zip
+FROM FebSales
+
 
 
 
