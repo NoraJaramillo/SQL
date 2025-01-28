@@ -52,7 +52,7 @@ FROM MaySales
 GROUP BY product
 ORDER BY 2 DESC
 
-The analysis reveals that batteries and chargers are the top-selling products, which can be attributed to their relatively lower price points and limited lifespan compared to higher-ticket items like smartphones or AirPods. 
+#The analysis reveals that batteries and chargers are the top-selling products, which can be attributed to their relatively lower price points and limited lifespan compared to higher-ticket items like smartphones or AirPods. 
 Consumers often purchase these essential accessories more frequently, driven by their short-term usage and need for replacement.
 This finding highlights the importance of focusing on these frequently bought products as part of a broader strategy for consistent sales performance.
 
@@ -82,6 +82,10 @@ ORDER BY Mo_No
 
 SELECT month, Sales_month, revenue, round((revenue - LAG(revenue,1,0) OVER(ORDER BY Mo_No))/ (LAG(revenue,1,0) OVER(ORDER BY Mo_No)) *100,1) as Perc_Monthly_Growth_Decline
 FROM revenue 
+
+#Sales demonstrated steady growth from January to April, peaking in March, which highlights strong demand during the first quarter. 
+However, the decline in May suggests potential seasonal effects or areas where strategic adjustments may be needed to sustain performance in the future.
+
 
 
 
