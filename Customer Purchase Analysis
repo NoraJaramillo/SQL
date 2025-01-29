@@ -86,10 +86,35 @@ FROM revenue
 #Sales demonstrated steady growth from January to April, peaking in March, which highlights strong demand during the first quarter. 
 However, the decline in May suggests potential seasonal effects or areas where strategic adjustments may be needed to sustain performance in the future.
 
-#3.
-codigo sin terminar:
-SELECT *, TRIM(SUBSTR(location, 1, INSTR(location, ',') - 1)) as street,  SUBSTR(location, INSTR(location, ',') + 1, INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') - 1) AS city, TRIM(SUBSTR(location, INSTR(location, ',') + INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') + 1)) AS state_zip
+#3. Revenue by City:
+Analyze total revenue generated in each city to identify high-perfoming locations and optimize resource allocation for future growth strategies.
+
+WITH totalsales AS(
+SELECT *,'January' as Month, '1' as Mo_No
+FROM JanSales
+UNION ALL
+SELECT *,'February' as Month, '2' as Mo_No
 FROM FebSales
+UNION ALL
+SELECT *,'March' as Month, '3' as Mo_No
+FROM MarSales
+UNION ALL
+SELECT *,'April' as Month, '4' as Mo_No
+FROM AprSales
+UNION ALL
+SELECT *,'May' as Month, '5' as Mo_No
+FROM MaySales
+),
+location AS(
+SELECT *, TRIM(SUBSTR(location, 1, INSTR(location, ',') - 1)) as street,  SUBSTR(location, INSTR(location, ',') + 1, INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') - 1) AS City, TRIM(SUBSTR(location, INSTR(location, ',') + INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') + 1)) AS state_zip
+FROM totalsales
+)
+
+SELECT distinct City,  Sum(Quantity) OVER(PARTITION BY city) as Sales_by_city, Sum(Quantity*price) OVER(PARTITION BY city) as Revenue
+FROM location
+ORDER BY 3 DESC
+
+
 
 
 
