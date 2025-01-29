@@ -114,6 +114,49 @@ SELECT distinct City,  Sum(Quantity) OVER(PARTITION BY city) as Sales_by_city, S
 FROM location
 ORDER BY 3 DESC
 
+As we can imagine, due to their size and economic influence, certain cities naturally generates higher revenue. 
+The top three: San Francisco, Los Angeles and New York City. Stand out due to ther high population density, strong econominc activity, and diverse consumer base. 
+Based on the results we will now analize the top three best-selling products in these cities.
+
+#4. Top-Selling Products in Leading Cities:
+Identify the three bestselling products in the top three revenue-generating cities to understand regional consumer preferences and optimize inventory distribution based on local demands trends.
+
+WITH totalsales AS(
+SELECT *,'January' as Month, '1' as Mo_No
+FROM JanSales
+UNION ALL
+SELECT *,'February' as Month, '2' as Mo_No
+FROM FebSales
+UNION ALL
+SELECT *,'March' as Month, '3' as Mo_No
+FROM MarSales
+UNION ALL
+SELECT *,'April' as Month, '4' as Mo_No
+FROM AprSales
+UNION ALL
+SELECT *,'May' as Month, '5' as Mo_No
+FROM MaySales
+),
+location AS(
+SELECT *, TRIM(SUBSTR(location, 1, INSTR(location, ',') - 1)) as street,  SUBSTR(location, INSTR(location, ',') + 1, INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') - 1) AS City, TRIM(SUBSTR(location, INSTR(location, ',') + INSTR(SUBSTR(location, INSTR(location, ',') + 1), ',') + 1)) AS state_zip
+FROM totalsales
+),
+Sales_detailed AS(
+SELECT distinct City, Product, Sum(Quantity) OVER(PARTITION BY City,Product) as Sales_by_city
+FROM location
+order by 1
+)
+
+SELECT City, Product, Sales_by_City
+FROM(SELECT City, Product, Sales_by_City, RANK() OVER(PARTITION BY City ORDER BY Sales_by_city DESC) as rank
+    FROM Sales_detailed
+    WHERE City like '%los Angeles%' OR City like '%San Francisco%' OR City like '%New York City%')
+WHERE rank < 4
+ORDER BY 3 DESC
+
+
+
+
 
 
 
