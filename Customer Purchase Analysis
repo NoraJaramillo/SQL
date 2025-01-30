@@ -181,7 +181,7 @@ ON c.order_id = s.orderID
 GROUP BY 1
 ORDER BY 2 DESC, 3 DESC
 
-The results indicate that all customers have only made a single purchase, with the highest spender reaching $2,400. 
+#The results indicate that all customers have only made a single purchase, with the highest spender reaching $2,400. 
 While some products, such as iPhones and AirPods, are durable and not frequently repurchased, others like batteries and chargers have shorter lifespans and could drive repeat purchases. 
 However, it’s important to consider that the data only covers a five-month period, which may not be sufficient to observe long-term customer behavior.
 This suggests that the business may benefit from customer retention strategies, such as email marketing, loyalty programs, or bundled offers, to encourage repeat purchases and increase customer lifetime value.
