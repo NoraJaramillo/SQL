@@ -114,7 +114,7 @@ SELECT distinct City,  Sum(Quantity) OVER(PARTITION BY city) as Sales_by_city, S
 FROM location
 ORDER BY 3 DESC
 
-As we can imagine, due to their size and economic influence, certain cities naturally generates higher revenue. 
+#As we can imagine, due to their size and economic influence, certain cities naturally generates higher revenue. 
 The top three: San Francisco, Los Angeles and New York City. Stand out due to ther high population density, strong econominc activity, and diverse consumer base. 
 Based on the results we will now analize the top three best-selling products in these cities.
 
@@ -153,6 +153,11 @@ FROM(SELECT City, Product, Sales_by_City, RANK() OVER(PARTITION BY City ORDER BY
     WHERE City like '%los Angeles%' OR City like '%San Francisco%' OR City like '%New York City%')
 WHERE rank < 4
 ORDER BY 3 DESC
+
+#This finding confirms the previous analysis, where we observed that batteries and chargers were the top-selling products overall. 
+Based on these insights, businesses could focus on maintaining high stock levels for these essential products and explore targeted promotions to further capitalize on their demand.
+
+
 
 
 
