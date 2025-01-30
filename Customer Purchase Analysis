@@ -157,8 +157,34 @@ ORDER BY 3 DESC
 #This finding confirms the previous analysis, where we observed that batteries and chargers were the top-selling products overall. 
 Based on these insights, businesses could focus on maintaining high stock levels for these essential products and explore targeted promotions to further capitalize on their demand.
 
+#5.Top Customers by Total Purchases:
+Identify the top customers who spent the most over a period, highlighting key customer segments for targeted marketing.
 
+SELECT acctnum, COUNT(DISTINCT order_id) as Total_orders, SUM(Quantity*price) as Total_spending, SUM(Quantity*price)/COUNT(DISTINCT order_id) as Avg_Order_Value
+FROM customers c
+left JOIN
+(SELECT *,'January' as Month, '1' as Mo_No
+FROM JanSales
+UNION ALL
+SELECT *,'February' as Month, '2' as Mo_No
+FROM FebSales
+UNION ALL
+SELECT *,'March' as Month, '3' as Mo_No
+FROM MarSales
+UNION ALL
+SELECT *,'April' as Month, '4' as Mo_No
+FROM AprSales
+UNION ALL
+SELECT *,'May' as Month, '5' as Mo_No
+FROM MaySales) s
+ON c.order_id = s.orderID
+GROUP BY 1
+ORDER BY 2 DESC, 3 DESC
 
+The results indicate that all customers have only made a single purchase, with the highest spender reaching $2,400. 
+While some products, such as iPhones and AirPods, are durable and not frequently repurchased, others like batteries and chargers have shorter lifespans and could drive repeat purchases. 
+However, it’s important to consider that the data only covers a five-month period, which may not be sufficient to observe long-term customer behavior.
+This suggests that the business may benefit from customer retention strategies, such as email marketing, loyalty programs, or bundled offers, to encourage repeat purchases and increase customer lifetime value.
 
 
 
