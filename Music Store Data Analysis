@@ -38,7 +38,8 @@ Since a single track  can belong to multiple playlists, this junction table link
 #Objective: 
 Using SQL queries, we aim to uncover revenue trends, customer segmentation, and product performance to generate insights that can optimize store operations.
 
-# 1. 
+# 1. Revenue Analysis by Genre:
+
 
 
 
