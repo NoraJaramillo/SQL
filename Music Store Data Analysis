@@ -48,6 +48,10 @@ ON t.GenreId = g.GenreId
 Group by 1
 Order by 2 desc
 
+#Rock is the top-performing genre, generating the highest revenue and sales, comfirming its strong demand.
+Latin music, while significantly behind Rock, show potential of growth.
+Metal and Alternative & Punk have smallet but dedicated audiences, contributing meaningfully to overall revenue.
+
 
 
 
