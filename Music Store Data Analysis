@@ -41,6 +41,14 @@ Using SQL queries, we aim to uncover revenue trends, customer segmentation, and 
 # 1. Revenue Analysis by Genre:
 Identify which music genres generate the highest revenue to understand customer preferences and optimize inventory and marketing strategies.
 
+SELECT g.Name, Sum(ii.Quantity*ii.UnitPrice) as revenue, Sum(Quantity) as Total_sales
+FROM invoice_items ii LEFT JOIN tracks t
+ON ii.Trackid = t.Trackid LEFT JOIN genres g
+ON t.GenreId = g.GenreId
+Group by 1
+Order by 2 desc
+
+
 
 
 
