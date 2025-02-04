@@ -2,3 +2,40 @@
 Using SQL queries, we aim to uncover revenue trends, customer segmentation, and product performance to generate insights that can optimize store operations.
 
 #Database Structure:
+
+#Employees table (employees):
+This table stores details about the employees working at the music store, including their Employee ID, Name, Title, an who they report to (ReportsTo).
+
+#Customer table (customers):
+This table contains customers details such as their name, country, email and assigned support representative (SupportRepID). This table is linked to the employees table.
+
+#Invoices table (invoices):
+This table holds sales transaction data, including Customer ID, Billing Address, Invoice Date and Total Amount.
+
+#Invoice items table (invoice_items):
+The inovice_items table details the indivivual items in each invoice, with Invoice ID, Track ID, Unit Price and Quantity Sold.
+
+#Artists table (artists):
+This table contains Artist ID and Name. It is linked to the albums table.
+
+#Albums table (albums):
+The albums table stores Album ID, Title, and Artist ID.
+
+#Tracks table (tracks):
+The tracjs table provides detailed song information, including Track ID, Name, Album ID, Genre ID, Media Type ID, Composer, Duration and Unir Price. 
+
+#Genres table (genres):
+This table categorizes music into different genres using Genre ID and Name.
+
+#Media Types table (media_types):
+The media_types table defines the format on each track using Media Type ID and Name.
+
+#Playlist Table (playlists):
+This table contains Playlist Id and Name, representing curated collections od tracks.
+
+#Playlist Tracks Table (playlist_track):
+Since a single track  can belong to multiple playlists, this junction table links the playslists and tracks tables using Playlist Id and Track Id.
+
+
+
+
