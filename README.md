@@ -9,6 +9,7 @@ Welcome to my SQL portfolio! This repository features a collection of SQL projec
 ## **Table of Contents**
 1. Fortune 500 Analysis:       https://github.com/NoraJaramillo/SQL/blob/main/Fortune%20500%20Analysis.md
 2. Customer Purchase Analysis: https://github.com/NoraJaramillo/SQL/blob/main/Customer%20Purchase%20Analysis
+3. Music Store Data Analysis: https://github.com/NoraJaramillo/SQL/blob/main/Music%20Store%20Data%20Analysis
 ---
 
 
