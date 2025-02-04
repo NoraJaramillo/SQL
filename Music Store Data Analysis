@@ -52,6 +52,23 @@ Order by 2 desc
 Latin music, while significantly behind Rock, show potential of growth.
 Metal and Alternative & Punk have smallet but dedicated audiences, contributing meaningfully to overall revenue.
 
+#2. Top-selling Artists:
+Determine which artists generate the highest sales to recognize trneds and focus promotional effort on high-performing music.
+
+SELECT ar.Name, Sum(ii.Quantity*ii.UnitPrice) as Revenue, Sum(Quantity) as Total_sales
+FROM invoice_items ii LEFT JOIN tracks t
+ON ii.Trackid = t.Trackid LEFT JOIN albums al
+ON t.AlbumId = al.AlbumId LEFT JOIN artists  ar
+ON al.ArtistId = ar.ArtistId
+GROUP BY 1
+ORDER BY 2 DESC
+
+The results show that Iron Maiden leads in both revenue ($138.6) and sales (140 tracks sold), confirming strong demand for their music. 
+U2 and Metallica follow closely, reinforcing the dominance of rock and metal in overall sales. 
+Led Zeppelin also ranks high, highlighting the lasting popularity of classic rock.
+Interestingly, Lost generated significant revenue ($81.59) despite selling fewer tracks (41), suggesting a higher price per track or premium content.
+
+
 
 
 
