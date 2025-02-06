@@ -63,13 +63,27 @@ ON al.ArtistId = ar.ArtistId
 GROUP BY 1
 ORDER BY 2 DESC
 
-The results show that Iron Maiden leads in both revenue ($138.6) and sales (140 tracks sold), confirming strong demand for their music. 
+#The results show that Iron Maiden leads in both revenue ($138.6) and sales (140 tracks sold), confirming strong demand for their music. 
 U2 and Metallica follow closely, reinforcing the dominance of rock and metal in overall sales. 
 Led Zeppelin also ranks high, highlighting the lasting popularity of classic rock.
 Interestingly, Lost generated significant revenue ($81.59) despite selling fewer tracks (41), suggesting a higher price per track or premium content.
 
-#3. Customer Lifetime Value (CLV) Analysis:
-Segment customers based on total spending and frequency of purchases to identify high-value customers and improve retention strategies.
+#3. Customer Purchase Frequency Overview:
+To examine the number of purchases per customer and determine if there are significant variations in buying behavior that could influence retention strategies and revenue optimization.
+
+SELECT c.Customerid, COUNT(DISTINCT ii.InvoiceId) as Total_purchases
+FROM invoice_items ii LEFT JOIN invoices i
+ON ii.InvoiceId = i.InvoiceId LEFT JOIN customers c
+ON i.Customerid = c.Customerid
+Group by 1
+order by 2 desc, 1
+
+#This analysis reveals a uniform purchase frequency across the customer base. 
+This suggests that purchases may be dictated by predefined patterns, such as subscription model or limited product availability.
+Since frequency is constant, further analysis should focus on spending differences, preferred products or variation in purchase amount rather than a traditional customer segmentation based on purchase count.
+
+
+
 
 
 
