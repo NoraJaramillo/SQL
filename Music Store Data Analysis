@@ -35,8 +35,10 @@ This table contains Playlist Id and Name, representing curated collections od tr
 - Playlist Tracks Table (playlist_track):
 Since a single track  can belong to multiple playlists, this junction table links the playslists and tracks tables using Playlist Id and Track Id.
 
+
 #Objective: 
 Using SQL queries, we aim to uncover revenue trends, customer segmentation, and product performance to generate insights that can optimize store operations.
+
 
 # 1. Revenue Analysis by Genre:
 Identify which music genres generate the highest revenue to understand customer preferences and optimize inventory and marketing strategies.
@@ -51,6 +53,7 @@ Order by 2 desc
 #Rock is the top-performing genre, generating the highest revenue and sales, comfirming its strong demand.
 Latin music, while significantly behind Rock, show potential of growth.
 Metal and Alternative & Punk have smallet but dedicated audiences, contributing meaningfully to overall revenue.
+
 
 #2. Top-selling Artists:
 Determine which artists generate the highest sales to recognize trneds and focus promotional effort on high-performing music.
@@ -68,6 +71,7 @@ U2 and Metallica follow closely, reinforcing the dominance of rock and metal in 
 Led Zeppelin also ranks high, highlighting the lasting popularity of classic rock.
 Interestingly, Lost generated significant revenue ($81.59) despite selling fewer tracks (41), suggesting a higher price per track or premium content.
 
+
 #3. Customer Purchase Frequency Overview:
 To examine the number of purchases per customer and determine if there are significant variations in buying behavior that could influence retention strategies and revenue optimization.
 
@@ -81,6 +85,31 @@ order by 2 desc, 1
 #This analysis reveals a uniform purchase frequency across the customer base. 
 This suggests that purchases may be dictated by predefined patterns, such as subscription model or limited product availability.
 Since frequency is constant, further analysis should focus on spending differences, preferred products or variation in purchase amount rather than a traditional customer segmentation based on purchase count.
+
+
+#4. Top 10 Customer Spending Patterns:
+Identify variations in total spending among customers despite similar purchase frequencies, 
+helping to distinguish high-spending customers from lower spenders and optimize targeted marketing strategies.
+
+WITH total AS (
+SELECT i.CustomerId, FirstName || ' ' || LastName as Name, SUM(unitprice) as Total
+FROM invoice_items ii LEFT JOIN invoices i
+ON ii.InvoiceId = i.InvoiceId LEFT JOIN customers c
+ON i.Customerid = c.Customerid
+group by 1, 2
+order by 3 desc
+),
+rank as (
+SELECT CustomerId, Name, Total, ROW_NUMBER() over(order by total desc) as Rank
+FROM total
+)
+SELECT CustomerId, Name, Total
+from rank
+WHERE rank < 11
+
+# The results highlight the top 10 highest-spending customers, with the highest spender reaching $49.62 and the lowest in the top 10 spending $42.62.
+We conclude that the top 10 have similar spending habits, indicating consistent purchasing behavior and suggest that most purchases may foloow a standardized pricing structure.
+
 
 
 
