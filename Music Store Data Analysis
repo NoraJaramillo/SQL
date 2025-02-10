@@ -107,8 +107,24 @@ SELECT CustomerId, Name, Total
 from rank
 WHERE rank < 11
 
-# The results highlight the top 10 highest-spending customers, with the highest spender reaching $49.62 and the lowest in the top 10 spending $42.62.
-We conclude that the top 10 have similar spending habits, indicating consistent purchasing behavior and suggest that most purchases may foloow a standardized pricing structure.
+#After analyzing the top 10 highest-spending customers, we observed that their spending habits are consistent, likely due to a standardized pricing structure. 
+However, understanding who spends the most is only part of the picture—it’s equally important to examine when purchases occur.
+
+
+#5. Customer Purchase Trends Over Time:
+Analyze whether customer purchases fluctuate over time, detecting potential seasonal trends.
+
+SELECT strftime('%Y-%m', InvoiceDate) AS Month_Year, SUM(ii.UnitPrice * ii.Quantity) AS Total_Revenue
+FROM genres g JOIN  tracks t
+ON g.GenreId = t.GenreId JOIN invoice_items ii
+ON t.TrackId = ii.Trackid LEFT JOIN invoices i
+ON ii.InvoiceId = i.InvoiceId 
+group by 1
+
+#This consistency suggests that purchases follow a fixed pattern, likely resembling a subscription-based model rather than organic, fluctuating sales.
+Due to this highly structured nature of the data, we will not proceed with a time series prediction, as the lack of variability makes forecasting unnecessary. 
+Additionally, we will not conduct a deeper investigation into revenue spikes, as they appear to be part of the same predefined purchasing structure rather than significant market-driven trends. 
+
 
 
 
