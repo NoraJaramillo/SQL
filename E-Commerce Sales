@@ -12,3 +12,7 @@ This dataset will be used for data visualization in Tableau, where key insights 
 - UnitPrice: Price per unit of the product 
 - CustomerID: Unique customer identifier
 - Country: Country where the purchase was made
+
+1. Customer segmentation based on RFM Analysis
+
+
