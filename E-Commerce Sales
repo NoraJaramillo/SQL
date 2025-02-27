@@ -13,6 +13,7 @@ This dataset will be used for data visualization in Tableau, where key insights 
 - CustomerID: Unique customer identifier
 - Country: Country where the purchase was made
 
-1. Customer segmentation based on RFM Analysis
+#1. Customer segmentation based on RFM Analysis
+Identify customer groups based on Recency(last purchase date), Frequency(number of purchases), and Monetary value(total spend)
 
 
