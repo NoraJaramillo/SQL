@@ -1,2 +1,14 @@
-This dataset downloaded from Kaggle, contains transaction details from an e-commerce business.
+##This dataset downloaded from Kaggle, contains transaction details from an e-commerce business.
 It includes sales, product, and purchase date information, making it useful for analyzing sales trends, customer behavior, and product performance.
+
+This dataset will be used for data visualization in Tableau, where key insights on sales performance, customer segmentation, and product trends will be presented through interactive dashboards.
+
+#Database Structure:
+- InvoiceNo: Unique voice number for each transaction
+- StockCode: Unique product identifier
+- Description: Name of th product
+- Quantity: Number of items purchased
+- InvoiceDate: Date and time of the purchase
+- UnitPrice: Price per unit of the product 
+- CustomerID: Unique customer identifier
+- Country: Country where the purchase was made
