@@ -1,6 +1,9 @@
 ##This dataset downloaded from Kaggle, contains transaction details from an e-commerce business.
 It includes sales, product, and purchase date information, making it useful for analyzing sales trends, customer behavior, and product performance.
 
+The data spans from December 2010 to December 2011, so for practical purposes, the analysis is conducted as if it were January 1, 2012. 
+This approach allows us to simulate real-world decision-making based on the latest available data.
+
 This dataset will be used for data visualization in Tableau, where key insights on sales performance, customer segmentation, and product trends will be presented through interactive dashboards.
 
 #Database Structure:
@@ -16,4 +19,10 @@ This dataset will be used for data visualization in Tableau, where key insights 
 #1. Customer segmentation based on RFM Analysis
 Identify customer groups based on Recency(last purchase date), Frequency(number of purchases), and Monetary value(total spend)
 
+SELECT 
+  customerid, MAX(DATE '2012-01-01' - DATE(invoicedate)) AS Recency, COUNT(invoiceno) as Frequency, SUM(unitprice*quantity) as Monetary
+FROM 
+  sales_data
+  GROUP BY customerid
+  ORDER BY 	2 ASC
 
