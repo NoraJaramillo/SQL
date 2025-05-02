@@ -19,10 +19,56 @@ This dataset will be used for data visualization in Tableau, where key insights 
 #1. Customer segmentation based on RFM Analysis
 Identify customer groups based on Recency(last purchase date), Frequency(number of purchases), and Monetary value(total spend)
 
+WITH gen_values AS(
+SELECT MAX(DATE '2012-01-01' - DATE(invoicedate)) as max_days, MIN(DATE '2012-01-01' - DATE(invoicedate)) as min_days, 
+	(SELECT MIN(purch_count) as min_purchases
+	FROM(SELECT
+		customerid, COUNT(invoiceno) as purch_count
+		FROM
+		sales_data
+		WHERE customerid IS NOT NULL
+   		GROUP BY customerid)),
+	(SELECT MAX(purch_count) as max_purchases
+	FROM(SELECT
+		customerid, COUNT(invoiceno) as purch_count
+		FROM
+		sales_data
+		WHERE customerid IS NOT NULL
+   		GROUP BY customerid)),
+	(SELECT MIN(tot_spend) as min_spend
+	FROM(SELECT
+		customerid, SUM(unitprice*quantity) as tot_spend
+		FROM
+		sales_data
+		WHERE customerid IS NOT NULL
+   		GROUP BY customerid)
+	WHERE tot_spend > 0),
+	(SELECT MAX(tot_spend) as max_spend
+	FROM(SELECT
+		customerid, SUM(unitprice*quantity) as tot_spend
+		FROM
+		sales_data
+		WHERE customerid IS NOT NULL
+   		GROUP BY customerid))
+	FROM
+	sales_data
+	),
+sales as(
 SELECT 
-  customerid, MAX(DATE '2012-01-01' - DATE(invoicedate)) AS Recency, COUNT(invoiceno) as Frequency, SUM(unitprice*quantity) as Monetary
+  customerid, MIN(DATE '2012-01-01' - DATE(invoicedate)) AS Days_last_purch, COUNT(invoiceno) as Purchase_count, SUM(unitprice*quantity) as total_spend
 FROM 
   sales_data
+  WHERE customerid IS NOT NULL
   GROUP BY customerid
-  ORDER BY 	2 ASC
+)
+
+SELECT customerid, Recency, Frequency, Monetary, (r * 100) + (f * 10) + m as RFM
+FROM(SELECT customerid, Days_last_purch AS Recency, 5 - ((Days_last_purch - min_days)/(max_days - min_days))*4 as r, 
+	 Purchase_count as Frequency, 1 + ((Purchase_count - min_purchases)/ (max_purchases - min_purchases))*4 as f,
+	 total_spend as Monetary, ROUND(1 + ((total_spend - min_spend)/(max_spend - min_spend))*4,0) as m
+	 FROM sales
+	 CROSS JOIN gen_values
+	 ORDER BY 4 DESC)	 
+ORDER BY 5 DESC
+
 
