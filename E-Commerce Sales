@@ -18,7 +18,6 @@ This dataset will be used for data visualization in Tableau, where key insights 
 
 #1. Customer segmentation based on RFM Analysis
 Identify customer groups based on Recency(last purchase date), Frequency(number of purchases), and Monetary value(total spend)
-
 WITH gen_values AS(
 SELECT MAX(DATE '2012-01-01' - DATE(invoicedate)) as max_days, MIN(DATE '2012-01-01' - DATE(invoicedate)) as min_days, 
 	(SELECT MIN(purch_count) as min_purchases
@@ -61,14 +60,13 @@ FROM
   WHERE customerid IS NOT NULL
   GROUP BY customerid
 )
-
-SELECT customerid, Recency, Frequency, Monetary, (r * 100) + (f * 10) + m as RFM
-FROM(SELECT customerid, Days_last_purch AS Recency, 5 - ((Days_last_purch - min_days)/(max_days - min_days))*4 as r, 
-	 Purchase_count as Frequency, 1 + ((Purchase_count - min_purchases)/ (max_purchases - min_purchases))*4 as f,
-	 total_spend as Monetary, ROUND(1 + ((total_spend - min_spend)/(max_spend - min_spend))*4,0) as m
+SELECT customerid, Recency , Frequency, Monetary, (r*100)+(f*10)+m as rfm
+FROM(SELECT customerid, Days_last_purch AS Recency, ROUND(5 - ((Days_last_purch - min_days)*1.0/(max_days - min_days)*1.0)*4,0) as r, 
+	 Purchase_count as Frequency, ROUND(1 + ((Purchase_count - min_purchases)*1.0/ (max_purchases - min_purchases)*1.0)*4,0) as f,
+	 total_spend as Monetary, ROUND(1 + ((total_spend - min_spend)*1.0/(max_spend - min_spend)*1.0)*4,0) as m
 	 FROM sales
-	 CROSS JOIN gen_values
-	 ORDER BY 4 DESC)	 
-ORDER BY 5 DESC
+	 CROSS JOIN gen_values)
+ORDER BY 5 desc
+
 
 
