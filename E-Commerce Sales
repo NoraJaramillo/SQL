@@ -76,3 +76,8 @@ SELECT customerid, Recency, Frequency, Monetary,
 			ELSE 'Best Customers' END as Segment
 FROM rfm
 ORDER BY rfm DESC
+
+#The RFM analysis successfully fulfilled the objective of identifying customer groups based on ther recency, frequency and monetary value.
+The results highlighted a strong group of high-value customers who purchase frequently, spend significantly and have bought very recently (ideal targets for retention and loyalty strategies)
+Additionally, the segmentation revealed groups of at-risk  and Lost customers, enabling the business to plan personalized re-engagement or reactivation campaigns.
+
