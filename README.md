@@ -28,7 +28,7 @@ This repository showcases projects where I **transform raw data into actionable 
 **Key Insight:**  
 - *Retail dominates in revenue, technology excels in efficiency, and finance lags in employee healthcare benefits.*  
 
-[View Project →](Fortune%20500%20Analysis.md)  
+[View Project →](https://github.com/NoraJaramillo/SQL/blob/main/Fortune%20500%20Analysis.md)
 
 ---
 
