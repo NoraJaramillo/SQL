@@ -1,28 +1,106 @@
+# **SQL & Data Analytics Portfolio – Nora Jaramillo**  
 
-# **SQL Portfolio**
+Welcome to my **SQL and Data Analytics portfolio!**  
 
-Welcome to my SQL portfolio! This repository features a collection of SQL projects and scripts I’ve worked on, highlighting my skills in data analysis, database management, and problem-solving. 
+I am an **Industrial Engineer** with experience in **process improvement and manufacturing operations**, transitioning into **Data Analytics**.  
 
+This repository showcases projects where I **transform raw data into actionable insights** for **business decision-making, process optimization, and customer understanding**.  
 
----
-
-## **Table of Contents**
-1. Fortune 500 Analysis:       https://github.com/NoraJaramillo/SQL/blob/main/Fortune%20500%20Analysis.md
-2. Customer Purchase Analysis: https://github.com/NoraJaramillo/SQL/blob/main/Customer%20Purchase%20Analysis
-3. Music Store Data Analysis: https://github.com/NoraJaramillo/SQL/blob/main/Music%20Store%20Data%20Analysis
-4. E-Commerce Sales: https://github.com/NoraJaramillo/SQL/blob/main/E-Commerce%20Sales
----
-
-
-### **How to Use This Repository**
-1. Clone the repository to your local machine.
-2. Navigate to the desired file and review the SQL scripts.
-3. Run the scripts in your preferred SQL environment (e.g., SQLiteStudio, MySQL Workbench).
+**Highlights:**  
+- SQL queries for **sales, customer behavior, and process analytics**  
+- **Business insights** connecting data to decisions  
+- **Realistic use cases** in retail, e-commerce, and operational analytics  
 
 ---
 
-If you have any questions or suggestions, feel free to contact me. I'm always open to feedback and collaboration!
+## **📂 Projects Overview**
 
+### **1️⃣ Fortune 500 Company Insights**
+**Objective:** Analyze Fortune 500 companies to identify **industry leaders**, **employee benefit trends**, and **sector comparisons**.  
 
-Feel free to explore, and don’t hesitate to reach out if you have questions or want to connect. I’m always open to learning and sharing ideas!
+**Key Analyses:**  
+- Top revenue companies by industry using **`RANK()`**  
+- Correlation between **company size and PTO/maternity policies**  
+- Industries with highest **healthcare benefit adoption**  
 
+**Skills:** SQL window functions, aggregations, CASE statements  
+
+**Key Insight:**  
+- *Retail dominates in revenue, technology excels in efficiency, and finance lags in employee healthcare benefits.*  
+
+[View Project →](Fortune%20500%20Analysis.md)  
+
+---
+
+### **2️⃣ Customer Purchase Analysis**  
+**Objective:** Understand **customer purchasing behavior** and **sales trends** over a 5‑month period.  
+
+**Key Analyses:**  
+- **Top-selling products** and **seasonal sales trends**  
+- **Revenue by city** and **regional product preferences**  
+- **Top customers and spending patterns** for retention strategy  
+
+**Skills:** SQL joins, subqueries, window functions  
+
+**Key Insight:**  
+- *Batteries and chargers drive consistent revenue due to frequent repurchase needs.  
+  Regional analysis supports inventory optimization and targeted promotions.*  
+
+[View Project →](Customer%20Purchase%20Analysis.md)  
+
+---
+
+### **3️⃣ Music Store Data Analysis**  
+**Objective:** Explore a digital music store’s **revenue, customer behavior, and inventory performance**.  
+
+**Key Analyses:**  
+- **Revenue by music genre and artist**  
+- **Customer spending patterns** (Top 10 spenders)  
+- **Purchase trends over time** to detect seasonality  
+
+**Skills:** SQL joins across 10+ tables, window functions, aggregation  
+
+**Key Insight:**  
+- *Rock dominates revenue, and high-value customers follow uniform purchase frequency, suggesting subscription-like patterns.*  
+
+[View Project →](Music%20Store%20Data%20Analysis.md)  
+
+---
+
+### **4️⃣ E-Commerce Sales – RFM Customer Segmentation**  
+**Objective:** Segment e-commerce customers by **Recency, Frequency, and Monetary (RFM)** for marketing and retention strategies.  
+
+**Key Analyses:**  
+- RFM scoring to classify **Best, Loyal, At Risk, and Lost Customers**  
+- Insights ready for **Tableau dashboards** and targeted marketing actions  
+
+**Skills:** SQL CTEs, window functions, RFM segmentation logic  
+
+**Key Insight:**  
+- *Best Customers are highly active and spend the most, representing ideal targets for loyalty campaigns, while Lost and At-Risk groups can be reactivated with tailored promotions.*  
+
+[View Project →](E-Commerce%20Sales.md)  
+
+---
+
+## **🚀 Next Steps and Upcoming Projects**
+- **Sales vs Inventory Analysis** – Identify products at risk of overstock or stockouts to improve purchasing decisions.  
+- **Manufacturing KPI Dashboard (SQL + Power BI)** – Measure **efficiency, scrap rate, and OTIF (On-Time In-Full)** for process improvement.  
+
+---
+
+## **💡 Skills Demonstrated**
+- **SQL (Intermediate/Advanced)** – Joins, CTEs, window functions, subqueries, aggregation  
+- **Data Analysis & Insights** – Translating raw data into actionable recommendations  
+- **Business Focus** – Sales analytics, customer segmentation, operational KPIs  
+- **Data Visualization (Planned)** – Tableau & Power BI dashboards  
+
+---
+
+## **📬 Connect with Me**
+I’m open to **collaboration and data analytics opportunities**:  
+
+- **LinkedIn:** [Nora Jaramillo](https://www.linkedin.com)  
+- **GitHub:** [NoraJaramillo](https://github.com/NoraJaramillo)  
+
+---
