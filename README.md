@@ -46,7 +46,8 @@ This repository showcases projects where I **transform raw data into actionable 
 - *Batteries and chargers drive consistent revenue due to frequent repurchase needs.  
   Regional analysis supports inventory optimization and targeted promotions.*  
 
-[View Project →](Customer%20Purchase%20Analysis.md)  
+[View Project →]([Customer%20Purchase%20Analysis.md)  ](https://github.com/NoraJaramillo/SQL/blob/main/Customer%20Purchase%20Analysis)
+
 
 ---
 
