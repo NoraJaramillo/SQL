@@ -83,11 +83,6 @@ This repository showcases projects where I **transform raw data into actionable 
 
 ---
 
-## **🚀 Next Steps and Upcoming Projects**
-- **Sales vs Inventory Analysis** – Identify products at risk of overstock or stockouts to improve purchasing decisions.  
-- **Manufacturing KPI Dashboard (SQL + Power BI)** – Measure **efficiency, scrap rate, and OTIF (On-Time In-Full)** for process improvement.  
-
----
 
 ## **💡 Skills Demonstrated**
 - **SQL (Intermediate/Advanced)** – Joins, CTEs, window functions, subqueries, aggregation  
@@ -100,7 +95,7 @@ This repository showcases projects where I **transform raw data into actionable 
 ## **📬 Connect with Me**
 I’m open to **collaboration and data analytics opportunities**:  
 
-- **LinkedIn:** [Nora Jaramillo](https://www.linkedin.com)  
+- **LinkedIn:** [Nora Jaramillo](https://www.linkedin.com/in/nora-jaramillo-6b577268/)
 - **GitHub:** [NoraJaramillo](https://github.com/NoraJaramillo)  
 
 ---
