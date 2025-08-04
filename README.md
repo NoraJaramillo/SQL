@@ -80,7 +80,7 @@ This repository showcases projects where I **transform raw data into actionable 
 **Key Insight:**  
 - *Best Customers are highly active and spend the most, representing ideal targets for loyalty campaigns, while Lost and At-Risk groups can be reactivated with tailored promotions.*  
 
-[View Project →](E-Commerce%20Sales.md)  
+[View Project →](https://github.com/NoraJaramillo/SQL/blob/main/E-Commerce%20Sales)
 
 ---
 
