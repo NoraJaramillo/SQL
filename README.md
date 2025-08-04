@@ -64,7 +64,7 @@ This repository showcases projects where I **transform raw data into actionable 
 **Key Insight:**  
 - *Rock dominates revenue, and high-value customers follow uniform purchase frequency, suggesting subscription-like patterns.*  
 
-[View Project →](Music%20Store%20Data%20Analysis.md)  
+[View Project →](https://github.com/NoraJaramillo/SQL/blob/main/Music%20Store%20Data%20Analysis)
 
 ---
 
