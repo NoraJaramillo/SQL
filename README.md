@@ -98,20 +98,22 @@ This portfolio showcases projects where I **transform raw data into actionable i
   *Dynamic dashboard with ranking, YoY growth, and interactive filters by region and category.*  
   **Skills:** DAX, date intelligence, drill-through.
 
-
-## **💡 Skills Demonstrated**
-- **SQL (Intermediate/Advanced)** – Joins, CTEs, window functions, subqueries, aggregation  
-- **Data Analysis & Insights** – Translating raw data into actionable recommendations  
-- **Business Focus** – Sales analytics, customer segmentation, operational KPIs  
-- **Data Visualization (Planned)** – Tableau & Power BI dashboards  
-
+---
 ---
 
 ## 4️⃣ Tableau Projects
 - **Sales Dashboard – Tableau** *(coming soon)*  
   *Interactive dashboard with KPIs, filters, and geographic visualizations.*  
-  **Skills:** Tableau, calculated fields, dashboard actions.  
-
+  **Skills:** Tableau, calculated fields, dashboard actions.
+---
+---
+## **💡 Skills Demonstrated**
+- **SQL (Intermediate/Advanced)** – Joins, CTEs, window functions, subqueries, aggregation  
+- **Data Analysis & Insights** – Translating raw data into actionable recommendations  
+- **Business Focus** – Sales analytics, customer segmentation, operational KPIs  
+- **Data Visualization (Planned)** – Tableau & Power BI dashboards  
+---
+---
 ## **📬 Connect with Me**
 I’m open to **collaboration and data analytics opportunities**:  
 
