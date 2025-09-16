@@ -1,21 +1,21 @@
 # **SQL & Data Analytics Portfolio – Nora Jaramillo**  
 
-Welcome to my **SQL and Data Analytics portfolio!**  
+Welcome to my **SQL and Data Analytics portfolio**!  
+I am an Industrial Engineer with solid experience in **data analysis, business intelligence, and process optimization**.  
+This portfolio showcases projects where I **transform raw data into actionable insights** for decision-making, sales analysis, customer understanding, and operational efficiency.  
 
-I am an **Industrial Engineer** with experience in **process improvement and manufacturing operations**, transitioning into **Data Analytics**.  
-
-This repository showcases projects where I **transform raw data into actionable insights** for **business decision-making, process optimization, and customer understanding**.  
-
-**Highlights:**  
-- SQL queries for **sales, customer behavior, and process analytics**  
-- **Business insights** connecting data to decisions  
-- **Realistic use cases** in retail, e-commerce, and operational analytics  
 
 ---
 
-## **📂 Projects Overview**
+## 🔹 Portfolio Structure
+1. **SQL Projects** → Query-based analysis using advanced SQL (window functions, joins, CTEs).  
+2. **SQL + Power BI Projects** → End-to-end workflows: SQL data extraction + BI dashboards.  
+3. **Power BI Projects** → Business dashboards using DAX, Power Query, and data modeling.  
+4. **Tableau Projects** → Interactive dashboards for storytelling and data visualization.
+---
 
-### **1️⃣ Fortune 500 Company Insights**
+## 1️⃣ SQL Projects
+- **Fortune 500 Company Insights**  
 **Objective:** Analyze Fortune 500 companies to identify **industry leaders**, **employee benefit trends**, and **sector comparisons**.  
 
 **Key Analyses:**  
@@ -32,7 +32,7 @@ This repository showcases projects where I **transform raw data into actionable 
 
 ---
 
-### **2️⃣ Customer Purchase Analysis**  
+- **Customer Purchase Analysis**  
 **Objective:** Understand **customer purchasing behavior** and **sales trends** over a 5‑month period.  
 
 **Key Analyses:**  
@@ -51,7 +51,7 @@ This repository showcases projects where I **transform raw data into actionable 
 
 ---
 
-### **3️⃣ Music Store Data Analysis**  
+- ** Music Store Data Analysis**  
 **Objective:** Explore a digital music store’s **revenue, customer behavior, and inventory performance**.  
 
 **Key Analyses:**  
@@ -67,8 +67,11 @@ This repository showcases projects where I **transform raw data into actionable 
 [View Project →](https://github.com/NoraJaramillo/SQL/blob/main/Music%20Store%20Data%20Analysis)
 
 ---
+---
+## 2️⃣ SQL + Power BI Projects
 
-### **4️⃣ E-Commerce Sales – RFM Customer Segmentation**  
+
+- ** E-Commerce Sales – RFM Customer Segmentation(SQL + Power BI)**  
 **Objective:** Segment e-commerce customers by **Recency, Frequency, and Monetary (RFM)** for marketing and retention strategies.  
 
 **Key Analyses:**  
@@ -83,6 +86,17 @@ This repository showcases projects where I **transform raw data into actionable 
 [View Project →](https://github.com/NoraJaramillo/SQL/blob/main/E-Commerce%20Sales)
 
 ---
+---
+## 3️⃣ Power BI Projects
+- **Delivery vs. Invoicing Dashboard**  
+  *SQL queries + Power BI model to reconcile deliveries vs. invoices.*  
+  **Skills:** SQL, Power BI, KPI design.
+
+  ---
+  
+- **Top-Selling Products of the Year**  
+  *Dynamic dashboard with ranking, YoY growth, and interactive filters by region and category.*  
+  **Skills:** DAX, date intelligence, drill-through.
 
 
 ## **💡 Skills Demonstrated**
@@ -92,6 +106,11 @@ This repository showcases projects where I **transform raw data into actionable 
 - **Data Visualization (Planned)** – Tableau & Power BI dashboards  
 
 ---
+
+## 4️⃣ Tableau Projects
+- **Sales Dashboard – Tableau** *(coming soon)*  
+  *Interactive dashboard with KPIs, filters, and geographic visualizations.*  
+  **Skills:** Tableau, calculated fields, dashboard actions.  
 
 ## **📬 Connect with Me**
 I’m open to **collaboration and data analytics opportunities**:  
